@@ -18,7 +18,7 @@ body {
       }
     }
 /* breakpoint */
-    @media (mini-width: 600px) {
+    @media (mini-width: 1000px) {
       body {
         font-size: 18px;
       }
@@ -28,7 +28,6 @@ body {
       height: 100vh;
       display: flex;
       justify-content: center;
-      /* align-items: center; */
       align-items: flex-end;
     }
    
@@ -70,13 +69,70 @@ body {
 
    .site-title {
      font-size: 2em;
-   }
+     font-family: 'Luckiest Guy', cursive;
+    }
    
    .site-subtitle {
      font-style: italic;
+     font-family: 'Source Code Pro', monospace;
+     line-height: 1.5em;
    }
+
+   .portfolio {
+    padding: 2em;
+    height: 95vh;
+   }
+
+   .portfolio h2 {
+    font-family: 'Pangolin', cursive;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+   }
+
+   .portfolio .grid {
+    display: grid;
+    gap: 2em;    
+   }
+
+   @media (min-width: 620px){
+    .portfolio .grid{
+      grid-template-columns: 240px 240px;
+      justify-content: center;
+    }   
+   }
+
+   @media (min-width: 840px){
+    .portfolio .grid{
+      grid-template-columns: repeat(3, 260px);
+      justify-content: center;
+      align-content: center;
+      /* height: calc(); */
+    }   
+   }
+
+   @media (min-width: 1000px){
+    .portfolio .grid{
+      grid-template-columns: repeat(4, 260px);
+      justify-content: center;
+    }   
+   }
+
+   .portfolio figure {
+     text-align: center;
+   }
+
    .img-portfolio {
-     height: 180px;
+     height: 220px;
      width: 180px;
+     object-fit: cover;
+     object-position: center;
+     border-radius: 10px;
+   }
+
+   @media (min-width: 1200px){
+     .img-portfolio {
+      height: 8em;
+      width: auto;
+     } 
    }
    
